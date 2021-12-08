@@ -11,7 +11,6 @@ public class CursorFollow : MonoBehaviour
 
     void Update()
     {
-        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = cursorPos;
+        transform.position = Input.mousePosition;
     }
 }
