@@ -11,6 +11,9 @@ public class GameMaster : MonoBehaviour
     public Image playerIndicator;
     public Sprite player1Indicator;
     public Sprite player2Indicator;
+    public int player1Energy;
+    public int player2Energy;
+
 
 
     public void resetTiles()
