@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: de091df66a906a344afae5de141527ea
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ALPACA54
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f92124812a2e92f41be9fc2bbc665e43, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
