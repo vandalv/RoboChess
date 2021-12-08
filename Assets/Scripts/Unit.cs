@@ -78,9 +78,13 @@ public class Unit : MonoBehaviour
         int enemyDamage = attackDamage - enemy.armor;
         int myDamage = enemy.defenseDamage - armor;
 
-        
+
         if (!transform.tag.Contains("Sni"))
         {
+            if (this.transform.position.x - enemy.transform.position.x < 0 && this.tag.Contains("Y"))
+            {
+                this.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
             if (enemyDamage >= 1)
             {
                 DamageIcon instance = Instantiate(damageIcon, enemy.transform.position, Quaternion.identity);
@@ -99,6 +103,10 @@ public class Unit : MonoBehaviour
         }
         if (transform.tag.Contains("Sni") && enemy.tag.Contains("Sni"))
         {
+            if (this.transform.position.x - enemy.transform.position.x < 0 && this.tag.Contains("Y"))
+            {
+                this.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
             if (enemyDamage >= 1)
             {
                 DamageIcon instance = Instantiate(damageIcon, enemy.transform.position, Quaternion.identity);
@@ -117,6 +125,10 @@ public class Unit : MonoBehaviour
         }
         if (transform.tag.Contains("Sni") && !enemy.tag.Contains("Sni"))
         {
+            if (this.transform.position.x - enemy.transform.position.x < 0 && this.tag.Contains("Y"))
+            {
+                this.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
             if (Mathf.Abs(transform.position.x - enemy.transform.position.x) + Mathf.Abs(transform.position.y - enemy.transform.position.y) <= 1)
             {
                 if (myDamage >= 1)
@@ -136,6 +148,10 @@ public class Unit : MonoBehaviour
             }
             else if(Mathf.Abs(transform.position.x - enemy.transform.position.x) + Mathf.Abs(transform.position.y - enemy.transform.position.y) > 1)
             {
+                if (this.transform.position.x - enemy.transform.position.x < 0 && this.tag.Contains("Y"))
+                {
+                    this.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                }
                 if (enemyDamage >= 1)
                 {
                     DamageIcon instance = Instantiate(damageIcon, enemy.transform.position, Quaternion.identity);
@@ -187,6 +203,14 @@ public class Unit : MonoBehaviour
                 {
                     enemiesInRange.Add(unit);
                     unit.rend.color = attackColor;
+                    if (this.transform.position.x - unit.transform.position.x < 0 && this.tag.Contains("Y"))
+                    {
+                        this.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    }
+                    if (this.transform.position.x - unit.transform.position.x > 0 && this.tag.Contains("Y"))
+                    {
+                        this.transform.localRotation = Quaternion.Euler(0, 180, 0);
+                    }
                 }
             }
         }
@@ -225,7 +249,7 @@ public class Unit : MonoBehaviour
             {
                 transform.localRotation = Quaternion.Euler(0, 180, 0);
             }
-            if (tilePos.x < transform.position.x && this.tag.Contains("Y"))
+            if (tilePos.x < transform.position.x && this.tag.Contains("Y") && enemiesInRange == null)
             {
                 transform.localRotation = Quaternion.Euler(0, 180, 0);
             }
@@ -262,7 +286,14 @@ public class Unit : MonoBehaviour
     IEnumerator mirrorDelay()
     {
         yield return new WaitForSeconds(0.1f);
-        transform.localRotation = Quaternion.Euler(0, 0, 0);
+        if (enemiesInRange == null)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        if (enemiesInRange == null && this.tag.Contains("Y"))
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
         this.GetComponent<SpriteRenderer>().sortingOrder = 10 - (int)transform.position.y;
     }
 }
