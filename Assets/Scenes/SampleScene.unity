@@ -524,7 +524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 30
 --- !u!222 &59235234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1764,7 +1764,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 80
 --- !u!222 &328715467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1954,7 +1954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 368306052}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642715918}
+        m_TargetAssemblyTypeName: Barrack, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 598463089486821810, guid: 2e1a87484243bc64b88f07abc7a78397, type: 3}
+          m_ObjectArgumentAssemblyTypeName: BarrackItem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &368519267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6986822690044837511, guid: 7e60d4ae824a9394c8999de647c65203, type: 3}
@@ -2042,7 +2054,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 389901677}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642715918}
+        m_TargetAssemblyTypeName: Barrack, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4069789595001890368, guid: 8da34b238866e4c4d95fa0efcb67c2cc, type: 3}
+          m_ObjectArgumentAssemblyTypeName: BarrackItem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &389901677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4809,7 +4833,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 804014226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642715918}
+        m_TargetAssemblyTypeName: Barrack, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3546421648085524564, guid: c956150b22eef6343912bc329071f413, type: 3}
+          m_ObjectArgumentAssemblyTypeName: BarrackItem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &804014226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5803,7 +5839,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 897919003}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642715918}
+        m_TargetAssemblyTypeName: Barrack, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3739364525830151628, guid: 68f2dfb3c0c0a0e449101a8385d98cc7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: BarrackItem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &909165582
 GameObject:
   m_ObjectHideFlags: 0
@@ -7849,7 +7897,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 80
 --- !u!222 &1357662371
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8565,7 +8613,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474036728}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642715918}
+        m_TargetAssemblyTypeName: Barrack, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: BarrackItem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1474036728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8829,7 +8889,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1512490175}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642715918}
+        m_TargetAssemblyTypeName: Barrack, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 9140770185370085019, guid: c17aedb5808c6d34cb1005897dcf6957, type: 3}
+          m_ObjectArgumentAssemblyTypeName: BarrackItem, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1512490175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11585,7 +11657,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: 30
 --- !u!222 &2137863539
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11721,6 +11793,10 @@ PrefabInstance:
     - target: {fileID: 3764009895490743718, guid: 2e1a87484243bc64b88f07abc7a78397, type: 3}
       propertyPath: m_Name
       value: yTesla (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374819370375844480, guid: 2e1a87484243bc64b88f07abc7a78397, type: 3}
+      propertyPath: m_TagString
+      value: YFact
       objectReference: {fileID: 0}
     - target: {fileID: 7374819370375844485, guid: 2e1a87484243bc64b88f07abc7a78397, type: 3}
       propertyPath: m_RootOrder
