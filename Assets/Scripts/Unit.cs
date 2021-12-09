@@ -22,6 +22,8 @@ public class Unit : MonoBehaviour
     public int defenseDamage;
     public int armor;
     Unit tempUnit;
+    public Text bossHealth;
+    public bool isBoss;
 
     public DamageIcon damageIcon;
 
