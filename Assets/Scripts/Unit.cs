@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
@@ -251,7 +252,7 @@ public class Unit : MonoBehaviour
     public void Move(Vector2 tilePos)
     {
         gm.resetTiles();
-        gm.selectedUnit.GetComponent<SpriteRenderer>().sortingOrder = 10;
+        gm.selectedUnit.GetComponent<SpriteRenderer>().sortingOrder = 10;//
         StartCoroutine(StartMovement(tilePos));
         foreach (Unit unit in FindObjectsOfType<Unit>())
         {
