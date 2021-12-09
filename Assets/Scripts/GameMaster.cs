@@ -11,8 +11,37 @@ public class GameMaster : MonoBehaviour
     public Image playerIndicator;
     public Sprite player1Indicator;
     public Sprite player2Indicator;
-    public int player1Energy;
-    public int player2Energy;
+    public int player1Energy = 110;
+    public int player2Energy = 110;
+    public Text player1EnergyText;
+    public Text player2EnergyText;
+
+
+    void getEnergyIncome(int playerTurn)
+    {
+        foreach (Factory f in FindObjectsOfType<Factory>())
+        {
+                if(f.playerNumber == playerTurn)
+                {
+                    if(playerTurn == 1)
+                    {
+                        player1Energy += f.energyPerTurn;
+                    }
+                    else
+                    {
+                        player2Energy += f.energyPerTurn;
+                    }
+                }
+
+            }
+            UpdateEnergyText();
+    }
+
+    public void UpdateEnergyText()
+    {
+        player1EnergyText.text = player1Energy.ToString();
+        player2EnergyText.text = player2Energy.ToString();
+    }
 
 
 
@@ -23,6 +52,12 @@ public class GameMaster : MonoBehaviour
             tile.Reset();
         }
     }
+
+    private void Start()
+    {
+        getEnergyIncome(1);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -42,7 +77,8 @@ public class GameMaster : MonoBehaviour
             playerTurn = 1;
             playerIndicator.sprite = player1Indicator;
         }
-        if(selectedUnit != null)
+        getEnergyIncome(playerTurn);
+        if (selectedUnit != null)
         {
             selectedUnit.selected = false;
             selectedUnit = null;
