@@ -91,5 +91,6 @@ public class GameMaster : MonoBehaviour
             unit.rend.color = Color.white;
             unit.hasAttacked = false;
         }
+        GetComponent<Barrack>().closeMenus();
     }
 }
