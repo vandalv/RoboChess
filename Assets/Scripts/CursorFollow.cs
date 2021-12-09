@@ -11,6 +11,6 @@ public class CursorFollow : MonoBehaviour
 
     void Update()
     {
-        transform.position = Input.mousePosition - 0.4;
+        transform.position = Input.mousePosition;
     }
 }
