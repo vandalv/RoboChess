@@ -106,6 +106,8 @@ MonoBehaviour:
     m_Bits: 64
   highlightedColor: {r: 0.6415094, g: 0.5970953, b: 0.5713065, a: 0.8666667}
   isWalkable: 0
+  creatableColor: {r: 0.6431373, g: 0.59607846, b: 0.57254905, a: 0.8666667}
+  isCreatable: 0
 --- !u!61 &767894637032587615
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -16,6 +16,8 @@ public class GameMaster : MonoBehaviour
     public Text player1EnergyText;
     public Text player2EnergyText;
 
+    public BarrackItem purchasedItem;
+
 
     void getEnergyIncome(int playerTurn)
     {

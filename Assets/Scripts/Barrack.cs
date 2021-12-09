@@ -62,5 +62,30 @@ public class Barrack : MonoBehaviour
             gm.player2Energy -= item.cost;
             player2Menu.SetActive(false);
         }
+        else
+        {
+            return;
+        }
+
+        gm.UpdateEnergyText();
+        gm.purchasedItem = item;
+
+        if(gm.selectedUnit != null)
+        {
+            gm.selectedUnit.selected = false;
+            gm.selectedUnit = null;
+        }
+        getCreatableTilex();
+    }
+
+    void getCreatableTilex()
+    {
+        foreach(Tile tile in FindObjectsOfType<Tile>())
+        {
+            if (tile.IsClear())
+            {
+                tile.SetCreatable();
+            }
+        }
     }
 }
