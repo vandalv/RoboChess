@@ -32,6 +32,15 @@ public class Unit : MonoBehaviour
     {
         rend = GetComponent<SpriteRenderer>();
         gm = FindObjectOfType<GameMaster>();
+        updateBossHealth();
+    }
+
+    public void updateBossHealth()
+    {
+        if (isBoss)
+        {
+            bossHealth.text = health.ToString();
+        }
     }
 
     private void OnMouseDown()
@@ -98,6 +107,7 @@ public class Unit : MonoBehaviour
                 instance.Setup(enemyDamage);
                 instance.Start();
                 enemy.health -= enemyDamage;
+                enemy.updateBossHealth();
             }
             if (myDamage >= 1)
             {
@@ -105,6 +115,7 @@ public class Unit : MonoBehaviour
                 instance.Setup(myDamage);
                 instance.Start();
                 health -= myDamage;
+                updateBossHealth();
             }
 
         }
@@ -152,6 +163,7 @@ public class Unit : MonoBehaviour
                     instance.Setup(myDamage);
                     instance.Start();
                     health -= myDamage;
+                    updateBossHealth();
                 }
                 if (enemyDamage >= 1)
                 {
@@ -159,6 +171,7 @@ public class Unit : MonoBehaviour
                     instance.Setup(enemyDamage);
                     instance.Start();
                     enemy.health -= enemyDamage;
+                    enemy.updateBossHealth();
                 }
             }
             else if(Mathf.Abs(transform.position.x - enemy.transform.position.x) + Mathf.Abs(transform.position.y - enemy.transform.position.y) > 1)
@@ -177,6 +190,7 @@ public class Unit : MonoBehaviour
                     instance.Setup(enemyDamage);
                     instance.Start();
                     enemy.health -= enemyDamage;
+                    enemy.updateBossHealth();
                 }
             }
             
