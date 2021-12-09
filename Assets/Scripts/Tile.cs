@@ -82,14 +82,16 @@ public class Tile : MonoBehaviour
         {
             BarrackItem item = Instantiate(gm.purchasedItem, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
             gm.resetTiles();
-            Unit unit = item.GetComponent<Unit>();
-            rend = unit.GetComponent<SpriteRenderer>();
-            if(unit != null)
+            if(item.GetType() is Unit)
             {
-                unit.hasMoved = true;
-                unit.hasAttacked = true;
+                Unit unit = item.GetComponent<Unit>();
+                rend = unit.GetComponent<SpriteRenderer>();
+                if (unit != null)
+                {
+                    unit.hasMoved = true;
+                    unit.hasAttacked = true;
+                }
             }
-            rend.color = Color.grey;
         }
     }
 

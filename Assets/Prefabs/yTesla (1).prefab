@@ -4820,7 +4820,7 @@ GameObject:
   - component: {fileID: 598463089486821810}
   m_Layer: 6
   m_Name: yTesla (1)
-  m_TagString: Y
+  m_TagString: YFact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,6 +11,8 @@ TagManager:
   - BSni
   - Y
   - B
+  - YFact
+  - BFact
   layers:
   - Default
   - TransparentFX
