@@ -35,6 +35,14 @@ public class Unit : MonoBehaviour
         updateBossHealth();
     }
 
+    private void Update()
+    {
+        if (this.hasMoved)
+        {
+            this.rend.color = Color.grey;
+        }
+    }
+
     public void updateBossHealth()
     {
         if (isBoss)
@@ -268,7 +276,7 @@ public class Unit : MonoBehaviour
     public void Move(Vector2 tilePos)
     {
         gm.resetTiles();
-        gm.selectedUnit.GetComponent<SpriteRenderer>().sortingOrder = 10;//
+        gm.selectedUnit.GetComponent<SpriteRenderer>().sortingOrder = 10;
         StartCoroutine(StartMovement(tilePos));
         foreach (Unit unit in FindObjectsOfType<Unit>())
         {

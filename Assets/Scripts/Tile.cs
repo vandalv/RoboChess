@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    private SpriteRenderer rend;
+    public SpriteRenderer rend;
     public Sprite[] tileGraphics;
 
     public float hoverAmount;
@@ -81,11 +81,12 @@ public class Tile : MonoBehaviour
         else if(isCreatable == true)
         {
             BarrackItem item = Instantiate(gm.purchasedItem, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            var number = Random.Range(1, 10000);
+            item.name = number.ToString();
             gm.resetTiles();
             if (!item.tag.Contains("Fac"))
             {
                 Unit unit = item.GetComponent<Unit>();
-                rend = unit.GetComponent<SpriteRenderer>();
                 unit.hasMoved = true;
                 unit.hasAttacked = true;
             }

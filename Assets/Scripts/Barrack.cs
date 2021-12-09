@@ -86,6 +86,22 @@ public class Barrack : MonoBehaviour
             {
                 tile.SetCreatable();
             }
+
+            //if (gm.playerTurn == 1)
+            //{
+            //    if (tile.transform.position.x < -5)
+            //    {
+            //        tile.SetCreatable();
+            //    }
+            //}
+            //if (gm.playerTurn == 2)
+            //{
+            //    if (tile.transform.position.x > 5)
+            //    {
+            //        tile.SetCreatable();
+            //    }
+            //}
+
         }
     }
 }
