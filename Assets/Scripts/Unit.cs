@@ -33,6 +33,7 @@ public class Unit : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         gm = FindObjectOfType<GameMaster>();
         updateBossHealth();
+        gm.UpdateStatsPanel();
     }
 
     private void Update()
@@ -41,6 +42,11 @@ public class Unit : MonoBehaviour
         {
             this.rend.color = Color.grey;
         }
+    }
+
+    private void OnMouseOver()
+    {
+        gm.ToggleStatsPanel(this);
     }
 
     public void updateBossHealth()
@@ -125,6 +131,7 @@ public class Unit : MonoBehaviour
                 health -= myDamage;
                 updateBossHealth();
             }
+            gm.UpdateStatsPanel();
 
         }
         if (transform.tag.Contains("Sni") && enemy.tag.Contains("Sni"))
@@ -151,7 +158,7 @@ public class Unit : MonoBehaviour
                 instance.Start();
                 health -= myDamage;
             }
-
+            gm.UpdateStatsPanel();
         }
         if (transform.tag.Contains("Sni") && !enemy.tag.Contains("Sni"))
         {
@@ -181,6 +188,7 @@ public class Unit : MonoBehaviour
                     enemy.health -= enemyDamage;
                     enemy.updateBossHealth();
                 }
+                gm.UpdateStatsPanel();
             }
             else if(Mathf.Abs(transform.position.x - enemy.transform.position.x) + Mathf.Abs(transform.position.y - enemy.transform.position.y) > 1)
             {
@@ -200,6 +208,7 @@ public class Unit : MonoBehaviour
                     enemy.health -= enemyDamage;
                     enemy.updateBossHealth();
                 }
+                gm.UpdateStatsPanel();
             }
             
         }

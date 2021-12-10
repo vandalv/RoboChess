@@ -4819,7 +4819,7 @@ GameObject:
   - component: {fileID: 4011954775488034891}
   - component: {fileID: 9140770185370085019}
   m_Layer: 6
-  m_Name: bTesla (2)
+  m_Name: bTesla (1)
   m_TagString: BFact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,7 +17,65 @@ public class GameMaster : MonoBehaviour
     public Text player2EnergyText;
 
     public BarrackItem purchasedItem;
+    public GameObject statsPanel;
+    public Unit viewedUnit;
+    public Unit yviewedUnit;
+    public Unit bviewedUnit;
 
+    public Text yHealthText;
+    public Text yArmorText;
+    public Text yAttackDamageText;
+    public Text yDefenceDamageText;
+
+    public Text bHealthText;
+    public Text bArmorText;
+    public Text bAttackDamageText;
+    public Text bDefenceDamageText;
+
+
+    public void ToggleStatsPanel(Unit unit)
+    {
+        if(unit.Equals(viewedUnit) == false)
+        {
+            viewedUnit = unit;
+            if (viewedUnit.tag.Contains("Y"))
+            {
+                yviewedUnit = viewedUnit;
+                UpdateStatsPanel();
+            }
+            if (viewedUnit.tag.Contains("B"))
+            {
+                bviewedUnit = viewedUnit;
+                UpdateStatsPanel();
+            }
+        }
+    }
+
+    public void UpdateStatsPanel()
+    {
+        if(yviewedUnit != null)
+        {
+            yHealthText.text = yviewedUnit.health.ToString();
+            yArmorText.text = yviewedUnit.armor.ToString();
+            yAttackDamageText.text = yviewedUnit.attackDamage.ToString();
+            yDefenceDamageText.text = yviewedUnit.defenseDamage.ToString();
+            if (yviewedUnit.isBoss)
+            {
+                yHealthText.text = "-";
+            }
+        }
+        if (bviewedUnit != null)
+        {
+            bHealthText.text = bviewedUnit.health.ToString();
+            bArmorText.text = bviewedUnit.armor.ToString();
+            bAttackDamageText.text = bviewedUnit.attackDamage.ToString();
+            bDefenceDamageText.text = bviewedUnit.defenseDamage.ToString();
+            if (bviewedUnit.isBoss)
+            {
+                bHealthText.text = "-";
+            }
+        }
+    }
 
     void getEnergyIncome(int playerTurn)
     {
