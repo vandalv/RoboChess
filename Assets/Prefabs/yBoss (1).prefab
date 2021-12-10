@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 938a029869a731948b426fc4e4e88066, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -129,6 +129,8 @@ MonoBehaviour:
   attackDamage: 6
   defenseDamage: 2
   armor: 1
+  bossHealth: {fileID: 0}
+  isBoss: 0
   damageIcon: {fileID: 8419388116905270284, guid: 2f0faf5243693a248bedca4798c33860, type: 3}
 --- !u!61 &4299549067746281053
 BoxCollider2D:

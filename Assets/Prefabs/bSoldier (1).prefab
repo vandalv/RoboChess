@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 923612b52f16bc74c9e1cc25beef0881, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -137,6 +137,8 @@ MonoBehaviour:
   attackDamage: 3
   defenseDamage: 2
   armor: 1
+  bossHealth: {fileID: 0}
+  isBoss: 0
   damageIcon: {fileID: 8419388116905270284, guid: 2f0faf5243693a248bedca4798c33860, type: 3}
 --- !u!95 &2224856854478916591
 Animator:
