@@ -124,6 +124,10 @@ public class GameMaster : MonoBehaviour
         {
             EndTurn();
         }
+        if (Input.GetKeyDown(KeyCode.Escape) == true)
+        {
+            Application.Quit();
+        }
     }
     void EndTurn()
     {
