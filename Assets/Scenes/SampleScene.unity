@@ -9112,7 +9112,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1213627605}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642715917}
+        m_TargetAssemblyTypeName: GameMaster, Assembly-CSharp
+        m_MethodName: restartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1218974994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17137,7 +17149,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1763805897}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642715917}
+        m_TargetAssemblyTypeName: GameMaster, Assembly-CSharp
+        m_MethodName: restartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1763805897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17158,7 +17182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d9a9b60bd2a0fc4449527b58a18f85df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68356600ccfd4604d8275b5b70b2091b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19507,7 +19531,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4299549067746281049, guid: ca8488c8a0be69e49902312bd3796772, type: 3}
       propertyPath: health
-      value: 1
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4299549067746281049, guid: ca8488c8a0be69e49902312bd3796772, type: 3}
       propertyPath: isBoss
@@ -19779,7 +19803,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7606125866551648995, guid: c4453ebb6d996ce468d3b548f34d4042, type: 3}
       propertyPath: health
-      value: 1
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7606125866551648995, guid: c4453ebb6d996ce468d3b548f34d4042, type: 3}
       propertyPath: bossHealth
