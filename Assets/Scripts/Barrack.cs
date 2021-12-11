@@ -20,12 +20,12 @@ public class Barrack : MonoBehaviour
 
     private void Update()
     {
-        if(gm.playerTurn == 1)
+        if (gm.playerTurn == 1)
         {
-         player1Button.interactable = true;
-         player2Button.interactable = false;
+            player1Button.interactable = true;
+            player2Button.interactable = false;
         }
-        else
+        else if(gm.playerTurn == 2)
         {
             player1Button.interactable = false;
             player2Button.interactable = true;
@@ -42,6 +42,12 @@ public class Barrack : MonoBehaviour
         {
             menu.SetActive(false);
         }
+    }
+
+    public void DisableMenu()
+    {
+        player1Button.interactable = false;
+        player2Button.interactable = false;
     }
 
     public void closeMenus()

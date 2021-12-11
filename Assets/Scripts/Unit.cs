@@ -218,9 +218,11 @@ public class Unit : MonoBehaviour
             {
                 if (enemy.tag.Contains("Y"))
                 {
+                    gm.playerTurn = 3;
                     gm.bvictoryPanel.SetActive(true);
                     gm.playerIndicator.enabled = false;
                     gm.statsPanel.SetActive(false);
+                    gm.GetComponent<Barrack>().DisableMenu();
                     foreach (Unit unit in FindObjectsOfType<Unit>())
                     {
                         unit.hasMoved = true;
@@ -228,9 +230,11 @@ public class Unit : MonoBehaviour
                 }
                 else
                 {
+                    gm.playerTurn = 3;
                     gm.yvictoryPanel.SetActive(true);
                     gm.playerIndicator.enabled = false;
                     gm.statsPanel.SetActive(false);
+                    gm.GetComponent<Barrack>().DisableMenu();
                     foreach (Unit unit in FindObjectsOfType<Unit>())
                     {
                         unit.hasMoved = true;
