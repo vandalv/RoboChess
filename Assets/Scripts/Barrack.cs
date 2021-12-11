@@ -61,7 +61,7 @@ public class Barrack : MonoBehaviour
         if(gm.playerTurn == 1 && item.cost <= gm.player1Energy)
         {
             gm.player1Energy -= item.cost;
-            player1Menu.SetActive(false);
+            player1Menu.SetActive(false);       
         }
         else if (gm.playerTurn == 2 && item.cost <= gm.player2Energy)
         {
