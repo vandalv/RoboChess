@@ -31,6 +31,8 @@ public class GameMaster : MonoBehaviour
     public Text bArmorText;
     public Text bAttackDamageText;
     public Text bDefenceDamageText;
+    public GameObject yvictoryPanel;
+    public GameObject bvictoryPanel;
 
 
     public void ToggleStatsPanel(Unit unit)

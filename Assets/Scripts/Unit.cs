@@ -214,11 +214,58 @@ public class Unit : MonoBehaviour
         }
         if(enemy.health <= 0)
         {
+            if (enemy.isBoss == true)
+            {
+                if (enemy.tag.Contains("Y"))
+                {
+                    gm.bvictoryPanel.SetActive(true);
+                    gm.playerIndicator.enabled = false;
+                    gm.statsPanel.SetActive(false);
+                    foreach (Unit unit in FindObjectsOfType<Unit>())
+                    {
+                        unit.hasMoved = true;
+                    }
+                }
+                else
+                {
+                    gm.yvictoryPanel.SetActive(true);
+                    gm.playerIndicator.enabled = false;
+                    gm.statsPanel.SetActive(false);
+                    foreach (Unit unit in FindObjectsOfType<Unit>())
+                    {
+                        unit.hasMoved = true;
+                    }
+                }
+                
+            }
             Destroy(enemy.gameObject);
             GetWalkableTiles();
         }
         if (health <= 0)
         {
+            if (this.isBoss == true)
+            {
+                if (enemy.tag.Contains("B"))
+                {
+                    gm.yvictoryPanel.SetActive(true);
+                    gm.playerIndicator.enabled = false;
+                    gm.statsPanel.SetActive(false);
+                    foreach (Unit unit in FindObjectsOfType<Unit>())
+                    {
+                        unit.hasMoved = true;
+                    }
+                }
+                else
+                {
+                    gm.bvictoryPanel.SetActive(true);
+                    gm.playerIndicator.enabled = false;
+                    gm.statsPanel.SetActive(false);
+                    foreach (Unit unit in FindObjectsOfType<Unit>())
+                    {
+                        unit.hasMoved = true;
+                    }
+                }
+            }
             gm.resetTiles();
             Destroy(this.gameObject);
         }
